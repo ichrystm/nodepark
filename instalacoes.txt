@@ -1,0 +1,6 @@
+- Create folder
+- Install express - npm install --save express
+- Install body-parser - npm install --save body-parser
+- Install sequelize - npm install --save sequelize
+- Install ejs - npm install --save ejs
+- Install mysql2 - npm install --save mysql2

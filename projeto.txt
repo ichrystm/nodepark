@@ -1,0 +1,45 @@
+----- PAINEL INICIAL ->
+
+Título
+
+Nova entrada
+*botão
+
+Veículos ativos:
+*lista - tabela - botão finalizar
+
+Historico:
+*Botão - redirecionar para página de histórico completo
+
+----- NOVA ENTRADA ->
+
+Título
+
+Dados
+*formulário {
+- Placa
+- Marca
+- Modelo
+- Data de entrada
+- Hora de entrada
+- Data de saída
+- Hora de saída
+- Estado
+}
+
+Cadastrar
+*Botão - salvar no BD e redirecionar para a página principal
+
+----- FINALIZAR ->
+
+Dados
+*Dados do veículo
+*Valor
+
+Finalizar
+*Botão - Alterar BD e redirecionar para a página principal
+
+----- REGRA DE NEGÓCIO ->
+
+1h - R$10,00
+demais - R$5,00 / H

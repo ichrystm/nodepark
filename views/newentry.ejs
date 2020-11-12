@@ -8,16 +8,16 @@
   <div class="card-body">
     <form method="POST" action="/newentry/new">
       <label>Plate</label>
-      <input type="text" name="plate" placeholder="ABC-1234" class="form-control">
+      <input type="text" name="plate" placeholder="ABC1234" maxlength="7" class="form-control">
       <br>
       <label>Manufacturer</label>
-      <input type="text" name="manufacturer" placeholder="Chrysler" class="form-control">
+      <input type="text" name="manufacturer" placeholder="Chrysler" maxlength="20" class="form-control">
       <br>
       <label>Model</label>
-      <input type="text" name="model" placeholder="300c" class="form-control">
+      <input type="text" name="model" placeholder="300c" maxlength="20" class="form-control">
       <br>
       <label>Entry date</label>
-      <input type="date" name="entrydate" class="form-control">
+      <input type="text" id="entrydate" name="entrydate" class="form-control">
       <br>
       <label>Entry hour</label>
       <input type="time" name="entryhour" class="form-control">

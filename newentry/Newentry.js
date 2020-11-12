@@ -19,7 +19,7 @@ const Newentry = connection.define("vehicles", {
 
   entrydate: {
     type: Sequelize.DATEONLY,
-    allowNull: true
+    allowNull: false
   },
 
   entryhour: {

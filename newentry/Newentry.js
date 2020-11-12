@@ -24,7 +24,7 @@ const Newentry = connection.define("vehicles", {
 
   entryhour: {
     type: Sequelize.TIME,
-    allowNull: true
+    allowNull: false
   },
 
   exitdate: {

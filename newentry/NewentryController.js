@@ -9,12 +9,24 @@ router.get("/newentry", (req, res) => {
 
 getEntryDate = () => {
   var date = new Date();
+
   var day = String(date.getDate());
   var month = String(date.getMonth()+ 1);
   var year = String(date.getFullYear());
 
+  var hour = String(date.getHours());
+  var minutes = String(date.getMinutes());
+  if(minutes <= 9){
+    minutes = "0" + minutes;
+  }
+  var seconds = String(date.getSeconds());
+
   let entryDate = year + "-" + month + "-" + day;
-  return entryDate;
+  let entryHour = hour + ":" + minutes + ":" + seconds;
+
+  var values = [entryDate, entryHour];
+  return values;
+
 }
 
 router.post("/newentry/new", (req, res) => {
@@ -27,7 +39,8 @@ router.post("/newentry/new", (req, res) => {
     plate: plate,
     manufacturer: manufacturer,
     model: model,
-    entrydate: datenow,
+    entrydate: datenow[0],
+    entryhour: datenow[1],
   }).then(() => {
     res.redirect("/");
   }).catch((err) => {

@@ -3,6 +3,8 @@ const app = express();
 const port = 8081;
 const bodyParser = require("body-parser");
 const connection = require("./database/database");
+const entry = require("./newentry/Newentry");
+
 
 const historicController = require("./historic/HistoricController");
 const newentryController = require("./newentry/NewentryController");
@@ -24,7 +26,13 @@ connection.authenticate()
 });
 
 app.get("/", (req, res) => {
-  res.render("index");
+  entry.findAll({ raw: true, order:[['entryhour', 'DESC']]})
+  .then(entrys => {
+    res.render('index', {
+      entrys: entrys
+    })
+  })
+  
 });
 
 app.use("/", historicController);

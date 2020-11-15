@@ -39,7 +39,8 @@ const Newentry = connection.define("vehicles", {
 
   state: {
     type: Sequelize.BOOLEAN,
-    allowNull: true
+    allowNull: true,
+    defaultValue: '1'
   }
 
 })

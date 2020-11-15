@@ -5,6 +5,29 @@
   <hr>
   <h2>Historic</h2>
   <hr>
+  <% entrys.forEach(entry => { %>
+    <% if(entry.state == '0') { %>
+    <br>
+    <div class="card">
+      <div class="card-header">
+        <h3><%= entry.plate %></h3>
+      </div>
+      <div class="card-body">
+        <b>Manufacturer:</b>
+        <a><%= entry.Manufacturer %></a>
+        <br>
+        <b>Model:</b>
+        <a><%= entry.model %></a>
+        <br>
+        <b>Entry date:</b>
+        <a><%= entry.entrydate %></a>
+        <br>
+        <b>Exit date:</b>
+        <a><%= entry.exitdate %></a>
+      </div>
+    </div>
+    <% } %>
+  <% }) %>
 </div>
 
 <%- include ('partials/footer.ejs'); %>

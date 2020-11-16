@@ -3,7 +3,7 @@ const router = express();
 const entry = require("../newentry/Newentry");
 
 router.get("/details", (req, res) => {
-  res.send('eae');
+  res.render("details");
 });
 
 module.exports = router;

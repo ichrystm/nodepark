@@ -8,6 +8,7 @@ const entry = require("./newentry/Newentry");
 
 const historicController = require("./historic/HistoricController");
 const newentryController = require("./newentry/NewentryController");
+const detailsController = require("./details/detailsController");
 
 const Newentry = require("./newentry/Newentry");
 
@@ -37,6 +38,7 @@ app.get("/", (req, res) => {
 
 app.use("/", historicController);
 app.use("/", newentryController);
+app.use("/", detailsController);
 
 app.listen(port, () => {
   console.log("Server online in localhost:" + port);

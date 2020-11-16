@@ -1,25 +1,18 @@
-getEntryDate = () => {
-  var date = new Date();
+const newentry = require("./newentry/NewentryController");
 
-  var day = String(date.getDate());
-  var month = String(date.getMonth()+ 1);
-  var year = String(date.getFullYear());
+calcValue = (entryhour, entrydate) => {
+  var result;
+  var date = getDate();
 
-  var hour = String(date.getHours());
-  var minutes = String(date.getMinutes());
-  if(minutes <= 9){
-    minutes = "0" + minutes;
+  result = (date[0].slice(-2) - 17) * -1;
+
+  console.log(result);
+
+  if(result <= 1){
+    var entryhour = date[1];
+    
   }
-  var seconds = String(date.getSeconds());
 
-  let entryDate = year + "-" + month + "-" + day;
-  let entryHour = hour + ":" + minutes + ":" + seconds;
-
-  var values = [entryDate, entryHour];
-  
-  return values;
 }
 
-var teste = getEntryDate();
-
-console.log(teste[1]);
+calcValue();

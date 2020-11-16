@@ -1,5 +1,4 @@
 const express = require("express");
-const connection = require("../database/database");
 const router = express.Router();
 const Newentry = require("./Newentry");
 
@@ -7,7 +6,7 @@ router.get("/newentry", (req, res) => {
   res.render("newentry");
 });
 
-getEntryDate = () => {
+getDate = () => {
   var date = new Date();
 
   var day = String(date.getDate());
@@ -33,7 +32,7 @@ router.post("/newentry/new", (req, res) => {
   var plate = req.body.plate;
   var manufacturer = req.body.manufacturer;
   var model = req.body.model;
-  var datenow = getEntryDate();
+  var datenow = getDate();
 
   Newentry.create({
     plate: plate,
